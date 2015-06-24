@@ -48,18 +48,19 @@ def dropLargeColumnItems(x,y):
 		ctypes.windll.user32.SetCursorPos(x, y)
 		leftClick()
 
+def dropLastColumnItems():
+	time.sleep(timeDelay)
+	rightClick()
+	y = initialYValue + (38*5) + 12 #bad hack, need to make methods update value of Y, but currently they are passed by value
+	time.sleep(timeDelay)
+	ctypes.windll.user32.SetCursorPos(x, y)
+	leftClick()
+
 time.sleep(timeDelay)
 dropSmallColumnItems(x,y)
-#set y value to be 5 items below top item
-print "Finished first column: %d %d" % (x,y)
+
 #last item
-time.sleep(timeDelay)
-rightClick()
-y = initialYValue + (38*5) + 12 #bad hack, need to make methods update value of Y, but currently they are passed by value
-time.sleep(timeDelay)
-print "before we set cursor for last item %d %d" % (x,y)
-ctypes.windll.user32.SetCursorPos(x, y)
-leftClick()
+dropLastColumnItems()
 
 # move to next column
 x = x + horizontalOffset
@@ -68,12 +69,7 @@ y = 469
 dropSmallColumnItems(x,y)
 
 #last item
-time.sleep(timeDelay)
-rightClick()
-y = initialYValue + (38*5) + 12 #bad hack, need to make methods update value of Y, but currently they are passed by value
-time.sleep(timeDelay)
-ctypes.windll.user32.SetCursorPos(x, y)
-leftClick()
+dropLastColumnItems()
 
 #move to next column
 x = x + horizontalOffset
@@ -82,12 +78,7 @@ y = 442
 dropLargeColumnItems(x,y)
 
 #last item
-time.sleep(timeDelay)
-rightClick()
-y = initialYValue + (38*5) + 12 #bad hack, need to make methods update value of Y, but currently they are passed by value
-time.sleep(timeDelay)
-ctypes.windll.user32.SetCursorPos(x, y)
-leftClick()
+dropLastColumnItems()
 
 #move to next column
 x = x + horizontalOffset
@@ -96,10 +87,5 @@ y = 442
 dropLargeColumnItems(x,y)
 
 #last item
-time.sleep(timeDelay)
-rightClick()
-y = initialYValue + (38*5) + 12 #bad hack, need to make methods update value of Y, but currently they are passed by value
-time.sleep(timeDelay)
-ctypes.windll.user32.SetCursorPos(x, y)
-leftClick()
+dropLastColumnItems()
 
