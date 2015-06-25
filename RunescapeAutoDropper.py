@@ -1,10 +1,12 @@
 import ctypes
 import time
+import random
 
 
 initialYValue = 469
 horizontalOffset = 42 #Value needed to get to next column
-x = 1958
+x = 1958 + random.randint(0,3) #8`31-laptop 1958-Extended screen
+print "RandomNum for X %d" % (x-831)  #For logging purpose
 y = initialYValue
 timeDelay = 0.2
 timeMousePressDelay = 0.1 #this is the delay between mouse press up and down to portray real human clicks
