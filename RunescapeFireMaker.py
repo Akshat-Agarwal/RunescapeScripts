@@ -2,17 +2,17 @@ import ctypes
 import time
 import random
 
-XTinderBox = 1956
+XTinderBox = 831 #1956
 YTinderBox = 440
 
 horizontalOffset = 42 #Value needed to get to next column
 
-x = 1958 + random.randint(0,3) #8`31-laptop 1958-Extended screen
+x = 831 + random.randint(0,3) #831-laptop 1958-Extended screen
 initialYValue = 469
 y = initialYValue
 timeDelay = 0.2
 timeMousePressDelay = 0.1 #this is the delay between mouse press up and down to portray real human clicks
-lightFireDelay = 10 #This is the time taken to finish lighting the fire
+lightFireDelay = 5 #This is the time taken to finish lighting the fire
 
 # see http://msdn.microsoft.com/en-us/library/ms646260(VS.85).aspx for details
 def leftClick():
